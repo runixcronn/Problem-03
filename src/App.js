@@ -51,9 +51,9 @@ export default function PinnedProjects() {
       <ul className="projects-list">
         {projects
           .filter((project) => project.isPinned)
-          .map((project) => {
+          .map((project, index) => {
             return (
-              <li className="project-list-item">
+              <li key={index} className="project-list-item">
                 <div className={`project-initials ${project.bgColor}`}>
                   {project.initials}
                 </div>
